@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import "../../styles/mixins.scss";
+
+.form-container {
+    height: 100vh;
+    //background-color: gray;
+    //display: flex;
+    //align-items: flex-end;
+    //flex-direction: column;
+    width: calc(100vw - 50px); //margin, padding and border
+    margin: 0 auto;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .form-text {
+        //background-color: aquamarine;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        .form-text-para {
+            //text-align: center;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 1.5rem;
+            margin-bottom: 2vh;
+            //max-width: 60vw;
+            //text-transform: uppercase;
+            font-family: "Poppins", sans-serif;
+            color: #6b6b6b;
+        }
+        .form-submit {
+            font-family: "Poppins", sans-serif;
+            //width: 100%;
+            margin: 2vw;
+            //background-color: aqua;
+            .form-name-email {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                gap: 2;
+                .fne-1{
+                    margin-bottom: 20px;
+                    display: inline-block;
+                    position: relative;
+                    input {
+                        
+                        width: 15vw;
+                        border: 0;
+                        //background: #2b2b2b;
+                        background: transparent;
+                        height: 50px;
+                        font-size: 16px;
+                        color: #8d8d8d;
+                        padding: 0 20px;
+                        -webkit-box-sizing: border-box;
+                        box-sizing: border-box;
+                        border-bottom: 1px solid #8d8d8d;
+                        font-family: "Poppins", sans-serif;
+                        
+                    }
+                    &::after {
+                        content: "";
+                        //border: #111;
+                        position: absolute;
+                        width: 100%;
+                        transform: scaleX(0);
+                        height: 2px;
+                        bottom: 0;
+                        left: 0;
+                        background-color: #fff;
+                        transform-origin: bottom right;
+                        transition: transform 0.25s ease-out;
+                    }
+                    &:hover::after{
+                        transform: scaleX(1);
+                        transform-origin: bottom left;
+                    }
+                    
+                }
+                .fne-2{
+                    margin-bottom: 20px;
+                    display: inline-block;
+                    position: relative;
+                    input {
+                        width: 15vw;
+                        border: 0;
+                        //background: #2b2b2b;
+                        background: transparent;
+                        height: 50px;
+                        font-size: 16px;
+                        color: #8d8d8d;
+                        padding: 0 20px;
+                        -webkit-box-sizing: border-box;
+                        box-sizing: border-box;
+                        border-bottom: 1px solid #8d8d8d;
+                        font-family: "Poppins", sans-serif;
+                        
+                    }
+                    &::after {
+                        content: "";
+                        //border: #111;
+                        position: absolute;
+                        width: 100%;
+                        transform: scaleX(0);
+                        height: 2px;
+                        bottom: 0;
+                        left: 0;
+                        background-color: #fff;
+                        transform-origin: bottom right;
+                        transition: transform 0.25s ease-out;
+                    }
+                    &:hover::after{
+                        transform: scaleX(1);
+                        transform-origin: bottom left;
+                    }
+                    
+                }
+            }
+            .form-subject {
+                margin-bottom: 20px;
+                display: inline-block;
+                position: relative;
+                width: 100%;
+                input {
+                    width: 100%;
+                    border: 0;
+                    //background: #2b2b2b;
+                    background: transparent;
+                    height: 50px;
+                    font-size: 16px;
+                    color: #8d8d8d;
+                    padding: 0 20px;
+                    -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+                    border-bottom: 1px solid #8d8d8d;
+                    font-family: "Poppins", sans-serif;
+                }
+                &::after {
+                    content: "";
+                    //border: #111;
+                    position: absolute;
+                    width: 100%;
+                    transform: scaleX(0);
+                    height: 2px;
+                    bottom: 0;
+                    left: 0;
+                    background-color: #fff;
+                    transform-origin: bottom right;
+                    transition: transform 0.25s ease-out;
+                }
+                &:hover::after{
+                    transform: scaleX(1);
+                    transform-origin: bottom left;
+                }
+            }
+            .form-message {
+                margin-bottom: 20px;
+                display: inline-block;
+                position: relative;
+                width: 100%;
+                textarea {
+                    width: 100%;
+                    border: 0;
+                    //background: #2b2b2b;
+                    background: transparent;
+                    height: 100px;
+                    font-size: 16px;
+                    color: #8d8d8d;
+                    padding: 20px;
+                    -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+                    border-bottom: 1px solid #8b8b8b;
+                    font-family: "Poppins", sans-serif;
+                    //margin-bottom: 20px;
+                }
+                &::after {
+                    content: "";
+                    //border: #111;
+                    position: absolute;
+                    width: 100%;
+                    transform: scaleX(0);
+                    height: 2px;
+                    bottom: 0;
+                    left: 0;
+                    background-color: #fff;
+                    transform-origin: bottom right;
+                    transition: transform 0.25s ease-out;
+                }
+                &:hover::after{
+                    transform: scaleX(1);
+                    transform-origin: bottom left;
+                }
+            }
+            .send-button {
+                border: 1px solid white;
+                padding: 15px;
+                background: transparent;
+                font-size: 16px;
+                //text-transform: uppercase;
+                color: white;
+                transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+                letter-spacing: 3px;
+                font-family: "Poppins", sans-serif;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &:hover {
+                    background-color: white;
+                    color: #111;
+                }
+            }
+        }
+    }
+
+    
+
+    @include mq("tablet", min) {
+        margin-left: 75px;
+        padding-left: 10px;
+        border-left: 1px solid rgb(116, 116, 116);
+        width: calc(100vw - 126px); //margin, padding and border
+    }
+    @include mq("tablet",max){
+        .form-text{
+            width: 100%;
+            text-align: left;
+            .form-submit{
+                .form-name-email{
+                    flex-direction: column;
+                    .fne-1,.fne-2{
+                        width: 100%;
+                        input{
+                            width: 100%;
+                        }
+
+                    }
+                }
+                .send-button{
+                    padding: 12px;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+    
+    @include mq("phablet",max){
+        .form-text{
+            width: 100%;
+        }
+    }
+}

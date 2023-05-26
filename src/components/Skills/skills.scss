@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import "../../styles/mixins";
+
+.skills-wrapper {
+    width: calc(100vw - 50px); 
+    position: relative;
+    padding-bottom: 10vh;
+    .big-wrapper {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 2;
+        .left-wrap {
+            width: 65%;
+            h2{
+            font-size: clamp(5rem, 7vw, 15vw);
+            font-weight: bold;
+            margin-bottom: 8vh;
+            font-family: "Poppins", sans-serif;
+            color: #fff;
+            overflow-wrap: break-word;
+            }
+            p{
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 1.5rem;
+            margin-bottom: 2vh;
+            font-family: "Poppins", sans-serif;
+            color: #b2b2b2;
+            span{
+                color: #111;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+            a{
+                &:hover{
+                    text-decoration: underline;
+                    color: white;
+                    cursor: pointer;
+                }
+            }
+
+            }
+            
+        }
+        .right-wrap {
+            width: 35%;
+            padding: 1.5rem;
+            padding-right: 2rem;
+            display: flex;
+            flex-direction: column;
+            .skills-progress{
+                background-color: #2e2e2e;
+                padding: 25px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border-radius: 20px;
+                .skills-item{
+                    margin-bottom: 2rem;
+                    width: 85%;
+                    h3{
+                        font-family: "Poppins", sans-serif;
+                        font-weight: bold;
+                        font-size: 20px;
+                        margin-bottom: 1rem;
+                        color:white
+                    }
+                }
+                .skills-item:last-child{
+                    margin-bottom: 0;
+                }
+            }
+            .card-experience{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 25px;
+             .card{
+                background-color: #f3f3f3;
+                width: 35vw;
+                border: 1px solid black;
+                border-radius: 20px;
+                padding: 15px;
+                box-shadow: 3px 4px 8px gray;
+                h3{
+                    font-size: 40px;
+                    font-weight: bold;
+                    margin-bottom: 1vh;
+                    font-family: "Poppins", sans-serif;
+                }
+                h5{
+                    font-size: 22px;
+                    font-weight: bold;
+                    margin-bottom: 2vh;
+                    font-family: "Poppins", sans-serif;
+                    color: #111;
+                }
+                p{
+                    font-weight: bold;
+                    font-size: 16px;
+                    line-height: 1.5rem;
+                    margin-bottom: 2vh;
+                    font-family: "Poppins", sans-serif;
+                    color: #6b6b6b;
+                }
+                
+             }   
+            }
+        }
+    }
+
+    @include mq("tablet", min) {
+        margin-left: 75px;
+        padding-left: 10px;
+        border-left: 1px solid rgb(116, 116, 116);
+        width: calc(100vw - 126px); //margin, padding and border
+        //padding-bottom: 10vh;
+    }
+
+   @media (max-width:768px) {
+        .big-wrapper{
+           margin: 0 25px;
+    }
+}
+
+    @media (max-width:1024px) {
+        .big-wrapper{
+            flex-direction: column;
+            .left-wrap{
+                width: 100%;
+                
+
+            }
+            .right-wrap{
+                width: 100%;
+            }
+        }
+    }
+
+    @include mq("phone-wide", max) {
+        .big-wrapper{
+            .left-wrap{
+                h2{
+                font-size: clamp(4rem, 7vw, 15vw);
+
+                }
+            }
+        }
+    }
+
+    @include mq("phone", max) {
+        .big-wrapper{
+            .left-wrap{
+                h2{
+                font-size: clamp(3rem, 7vw, 15vw);
+
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+}
